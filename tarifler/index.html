@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ana Sayfa</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='background.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            margin: 0;
+            padding-top: 80px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .ust-serit {
+            background-color: white;
+            color: black;
+            width: 100%;
+            padding: 15px 0;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            height: 50px;
+            margin-right: 12px;
+        }
+
+        .icerik {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .arama-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .arama-baslik {
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .arama-form {
+            display: flex;
+            gap: 10px;
+        }
+
+        .arama-form input {
+            width: 320px;
+            padding: 14px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+        }
+
+        .arama-form button {
+            padding: 14px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="ust-serit">
+        <img src="{{ url_for('static', filename='logo.png') }}" class="logo">
+        <span>Malzemeden Tarif</span>
+    </div>
+
+    <div class="icerik">
+        <div class="arama-container">
+            <div class="arama-baslik">
+                Lütfen Elinizdeki Malzemeleri Giriniz
+            </div>
+
+            <form class="arama-form" action="/ara" method="get">
+                <input type="text" name="q" placeholder="Tarif Ara..." required>
+                <button type="submit">Ara</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
