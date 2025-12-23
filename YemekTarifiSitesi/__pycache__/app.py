@@ -491,17 +491,3 @@ Soğuk servis ediniz.
 - **Zorluk:** Kolay
 
 ## 🛒 Malzemeler
-- 1 litre badem sütü (veya soya sütü)
-- 2 yemek kaşığı kakao
-- 3 yemek kaşığı mısır nişastası
-- 4 yemek kaşığı toz şeker
-
-## 👨‍🍳 Yapılışı
-1. Tüm malzemeleri tencereye alın.
-2. Sürekli karıştırarak pişirin.
-3. Koyulaşınca kaselere paylaştırın.
-4. Soğuduktan sonra buzdolabına koyun.
-
-## 💡 Servis Önerisi
-Üzerine meyve dilimleri ekleyebilirsiniz.
-
