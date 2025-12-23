@@ -16,6 +16,36 @@ if __name__ == "__main__":
     app.run(debug=True)
     # 🍽️ Yemek Tarifi Sitesi
 
+<div class="malzeme-container">
+  {% for m in malzemeler %}
+    <div class="malzeme-kart">
+      <img src="{{ url_for('static', filename='images/' + m.resim) }}" alt="{{ m.isim }}">
+      <p>{{ m.isim }}</p>
+    </div>
+  {% endfor %}
+</div>
+
+<style>
+.malzeme-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.malzeme-kart {
+  width: 120px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.malzeme-kart img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+</style>
+
 Bu projede farklı kategorilerde yemek tarifleri bulunmaktadır.
 
 ## 📚 Tarifler
